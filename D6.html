@@ -93,7 +93,7 @@
        Scrivi una funzione per aggiungere al titolo della pagina una classe "myHeading"
     */
 
-      const addClassToTitle = function () {
+    const addClassToTitle = function () {
         document.querySelector("h1").classList.add("myHeading");
       };
       console.log(addClassToTitle);
@@ -102,7 +102,7 @@
        Scrivi una funzione che cambi il testo dei p figli di un div
       */
 
-      const changePcontent = function () {
+     const changePcontent = function () {
         let paragrahs = document.querySelectorAll("div p");
         paragrahs.forEach(p => {
           p.textContent = "Il paragrafo cambiato"
@@ -114,7 +114,7 @@
        Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
       */
 
-      const changeUrls = function () {
+    const changeUrls = function () {
         let links = document.querySelectorAll("a:not(footer a)");
         link.forEach(link =>{
           link.href = "https://www.google.com";
@@ -126,7 +126,7 @@
        Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
     */
 
-      const addToTheSecond = function () {
+    const addToTheSecond = function () {
         let secondList = document.getElementById("secondList");
         let newItem = document.createElement("li");
         newItem.textContent = "il nuovo elemento ";
@@ -138,7 +138,7 @@
        Scrivi una funzione che aggiunga un paragrafo al primo div
     */
 
-      const addParagraph = function () {
+    const addParagraph = function () {
         let firstDiv = document.querySelector("div");
         let newParagraph = document.queryElement("p");
         newParagraph.textContent = "il nuovo paragrafo";
@@ -150,7 +150,7 @@
        Scrivi una funzione che faccia scomparire la prima lista non ordinata
     */
 
-      const hideFirstUl = function () {
+    const hideFirstUl = function () {
         let firstUl = document.querySelector("ul");
         firstUl.style.display = "none";
       };
@@ -160,7 +160,7 @@
        Scrivi una funzione che renda verde il background di ogni lista non ordinata
       */
 
-      const paintItGreen = function () {
+    const paintItGreen = function () {
         let lists = document.querySelectorAll("ul");
         lists.forEach(list => {
           list.style.backgroundColor = "green";
@@ -172,7 +172,7 @@
        Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
       */
 
-      const makeItClickable = function () {
+    const makeItClickable = function () {
         let h1 = document.querySelector("h1");
         h1.addEventListener("click", function() { h1.textContent = h1.textContent.slice(0, -1);
         });
@@ -183,7 +183,7 @@
        Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
       */
 
-      const revealFooterLink = function () {
+    const revealFooterLink = function () {
         let footerLink = document.querySelector("footer a");
         document.querySelector("footer").addEventListener("click", function () {
           alert(footerLink.href);
@@ -196,10 +196,10 @@
        La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
       */
 
-      const generateTable = function () {
+    const generateTable = function () {
       let tableArea = document.getElementById("tableArea");
       let table = document.createElement("table");
-      table.innerHTML = `
+        table.innerHTML = `
       <tr>
       <th>Immagine</th>
       <th>Nome Prodotto</th>
@@ -218,7 +218,7 @@
       <td>20</td>
       <td>$200</td>
       </tr>`;
-      tableArea.appendChild(table);
+        tableArea.appendChild(table);
       };
       console.log(generateTable);
 
@@ -227,9 +227,9 @@
     */
 
       const addRow = function (immagine, nomeProdotto, quantita, prezzo) {
-      let table = document.querySelector("#tableArea table");
-      let newRow = document.createElement("tr");
-      newRow.innerHTML = `
+        let table = document.querySelector("#tableArea table");
+        let newRow = document.createElement("tr");
+        newRow.innerHTML = `
       <td><img src="${immagine}" alt="placeholder"></td>
       <td>${nomeProdotto}</td>
       <td>${quantita}</td>
