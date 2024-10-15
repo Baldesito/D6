@@ -84,9 +84,9 @@
        Scrivi una funzione per cambiare il titolo della pagina in qualcos'altro
     */
       const changeTitle = function () {
-        document.title = "Balde Abdoulaye";
+        document.title = "Balde-Abdoulaye";
       };
-      console.log(changeTitle);
+      changeTitle();
       
 
       /* ESERCIZIO 2
@@ -96,7 +96,7 @@
     const addClassToTitle = function () {
         document.querySelector("h1").classList.add("myHeading");
       };
-      console.log(addClassToTitle);
+      addClassToTitle();
 
       /* ESERCIZIO 3
        Scrivi una funzione che cambi il testo dei p figli di un div
@@ -108,7 +108,7 @@
           p.textContent = "Il paragrafo cambiato"
         });
       };
-      console.log(changePcontent);
+      changePcontent();
 
       /* ESERCIZIO 4
        Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
@@ -116,11 +116,11 @@
 
     const changeUrls = function () {
         let links = document.querySelectorAll("a:not(footer a)");
-        link.forEach(link =>{
+        links.forEach(link => {
           link.href = "https://www.google.com";
-        })
+        });
       };
-      console.log(changeUrls);
+      changeUrls();
 
       /* ESERCIZIO 5
        Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
@@ -132,7 +132,7 @@
         newItem.textContent = "il nuovo elemento ";
         secondList.appendChild(newItem);
       };
-      console.log(addToTheSecond);
+      addToTheSecond();
 
       /* ESERCIZIO 6
        Scrivi una funzione che aggiunga un paragrafo al primo div
@@ -140,11 +140,11 @@
 
     const addParagraph = function () {
         let firstDiv = document.querySelector("div");
-        let newParagraph = document.queryElement("p");
+        let newParagraph = document.createElement("p");
         newParagraph.textContent = "il nuovo paragrafo";
         firstDiv.appendChild(newParagraph);
       };
-      console.log(addParagraph);
+      addParagraph();
 
       /* ESERCIZIO 7
        Scrivi una funzione che faccia scomparire la prima lista non ordinata
@@ -154,7 +154,7 @@
         let firstUl = document.querySelector("ul");
         firstUl.style.display = "none";
       };
-      console.log(hideFirstUl);
+      hideFirstUl();
 
       /* ESERCIZIO 8 
        Scrivi una funzione che renda verde il background di ogni lista non ordinata
@@ -166,7 +166,7 @@
           list.style.backgroundColor = "green";
         });
       };
-      console.log(paintItGreen);
+      paintItGreen();
 
       /* ESERCIZIO 9
        Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
@@ -177,7 +177,7 @@
         h1.addEventListener("click", function() { h1.textContent = h1.textContent.slice(0, -1);
         });
       };
-      console.log(makeItClickable);
+      makeItClickable();
 
       /* ESERCIZIO 10
        Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
@@ -189,7 +189,7 @@
           alert(footerLink.href);
         });
       };
-      console.log(revealFooterLink);
+      revealFooterLink();
 
       /* ESERCIZIO 11
        Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
@@ -220,7 +220,7 @@
       </tr>`;
         tableArea.appendChild(table);
       };
-      console.log(generateTable);
+      generateTable();
 
       /* ESERCIZIO 12
        Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
@@ -236,19 +236,19 @@
       <td>${prezzo}</td>`;
       table.appendChild(newRow);
       };
-      console.log(addRow);
+      addRow("https://via.placeholder.com/150", "Prodotto 3", 30, "$300");
 
       /* ESERCIZIO 14
       Crea una funzione che nasconda le immagini della tabella quando eseguita
     */
 
       const hideAllImages = function () {
-        let hideAllImages = document.querySelectorAll("#tableArea table img");
+        let images = document.querySelectorAll("#tableArea table img");
         images.forEach(img => {
           img.style.display = "nome";
         });
       };
-      console.log(hideAllImages);
+      hideAllImages();
 
       /* EXTRA ESERCIZIO 15
       Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
@@ -261,7 +261,7 @@
           h2.style.color = randomColor;
         });
       };
-      console.log(changeColorWithRandom);
+    changeColorWithRandom();
     </script>
   </body>
 </html>
